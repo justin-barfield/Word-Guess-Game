@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes and stuff</title>
+</head>
+<body>
+
+    <div id="msg"></div>
+
+
+<script>
+
+    var showText = function (target, message, index, interval) {   
+        if (index < message.length) {
+            $(target).append(message[index++]);
+            setTimeout(function() { showText(target, message, index, interval); }, interval);
+        }
+        }
+
+    $(function () {
+        showText("#msg", "Hello, World!", 0, 500);   
+    });
+
+    document.onkeyup = function(event) {
+    var letter = event.key;
+};
+
+// function for random number and word
+function renderWord(q) {
+    var wordElement = document.getElementById('generatedWord');
+     
+};
+
+// generate random word when page loads
+
+// var randomWord = function(){
+
+    var randomNumber = Math.floor(Math.random() * words.length);
+    // document.getElementById('generatedWord').innerHTML = words[randomNumber];
+
+// };
+
+alert(randomWord())
+
+function printLetterByLetter(message, speed){
+    var i = 0;
+    var interval = setInterval(function(){
+        document.getElementById('generated-word').innerHTML += message.charAt(i);
+        i++;
+        if (i > message.length){
+            clearInterval(interval);
+        }
+    }, speed);
+}
+
+printLetterByLetter("Hello world, bonjour le monde.", 100);
+
+//generate a random word from array
+//write word on screen
+//hide word from view
+//start game
+
+//register keystrokes
+//compare keystrokes to word on screen
+//if right, display letter
+    //if all letters guessed, add 1 to score
+//if wrong, -attempts available
+    //if no attempts left, add 1 to losses, restart game with new word
+
+</script>
+    
+</body>
+</html>
