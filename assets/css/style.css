@@ -5,3 +5,16 @@
 body {
     background-image: "https://images.fineartamerica.com/images-medium-large-5/hangmans-noose-on-black-background-peter-dazeley.jpg"
 }
+
+#generated-word{
+    width: 100%;
+    
+}
+
+.word-letters {
+    position: relative;
+}
+
+#scoreboard {
+    list-style: none;
+}
