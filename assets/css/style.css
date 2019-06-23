@@ -19,6 +19,7 @@ body {
     display: flex;
     justify-self: left;
     display: inline-block;
+    opacity: 0;
 
 }
 
