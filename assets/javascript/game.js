@@ -5,6 +5,12 @@ var words = [
     ['m', 'e'],
     ['s', 'o', 'l', 'v', 'e'],
     ['e','v','e','r','y','t','h','i','n','g'],
+    ['g', 'e', 'o', 'r', 'g', 'i', 'a'],
+    ['b', 'u', 'l', 'l', 'd', 'o', 'g', 's'],
+    ['s', 'e', 'a', 's', 'o', 'n'],
+    ['w', 'i', 'n', 's'],
+    ['h', 'a', 'n', 'g', 'm', 'a', 'n'],
+    ['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'],
 ];
 
 // Write Attempts available
@@ -116,6 +122,11 @@ appendLetters.textContent = letterPressed + " ";
 lettersUsedID.appendChild(appendLetters);
 
 var correct = false;
+var sound = new Audio();
+function playSound() {
+    sound.src = 'cheer1.wav';
+    sound.play();
+}
 
 // Compare keystrokes to word on screen
 for(var i = 0; i < generateRandomWord.length; i++){
@@ -127,19 +138,22 @@ for(var i = 0; i < generateRandomWord.length; i++){
         correct = true;
         // Win update
         if(letterCount === generateRandomWord.length){
-            alert('You win!');
-            // Need to set timeout
-            wins++;
-            writeWins();
-            resetLettersUsed();
-            lettersUsedID.innerHTML = '';
-            wordID.innerHTML = '';
-            dashesID.innerHTML = '';
-            writeWord();
-            printDashes();
-            writeAttempts();
-            letterCount = 0;
-            return;
+            playSound();
+            setTimeout(function() {
+                alert('You win!');
+                // Need to set timeout
+                wins++;
+                writeWins();
+                resetLettersUsed();
+                lettersUsedID.innerHTML = '';
+                wordID.innerHTML = '';
+                dashesID.innerHTML = '';
+                writeWord();
+                printDashes();
+                writeAttempts();
+                letterCount = 0;
+                return;
+            }, 100);
         };
     };
 };

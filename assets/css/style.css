@@ -3,10 +3,46 @@
 }
 
 body {
-    background-image: "https://images.fineartamerica.com/images-medium-large-5/hangmans-noose-on-black-background-peter-dazeley.jpg"
+    margin: 0;
+    padding: 0;
+    background: url('../images/hangmans-noose-on-black-background-peter-dazeley.jpg');
+    background-size: cover;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
 }
 
-#generated-word{
+#hangman {
+    width: 100%;
+
+    display: flex;
+    justify-content: center
+}
+
+#scoreboard {
+    list-style: none;
+}
+
+.list {
+
+}
+
+#attempts {
+
+}
+
+#used-letters {
+
+}
+
+#games-won {
+
+}
+
+#games-lost {
+
+}
+
+#generated-word {
     width: 100%;
     height: 30px;
     position: relative;
@@ -21,10 +57,6 @@ body {
     display: inline-block;
     opacity: 0;
 
-}
-
-#scoreboard {
-    list-style: none;
 }
 
 #dashes {
