@@ -124,7 +124,7 @@ lettersUsedID.appendChild(appendLetters);
 var correct = false;
 var sound = new Audio();
 function playSound() {
-    sound.src = 'cheer1.wav';
+    sound.src = 'assets/images/cheer1.wav';
     sound.play();
 }
 
